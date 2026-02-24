@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<!-- saved from url=(0232)file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kensho CIP — UI Mockups</title>
+<style>
+  :root {
+    --kensho-blue: #1B3A5C;
+    --accent-blue: #2B7AB8;
+    --light-blue: #E8F0F8;
+    --green: #2E8B57;
+    --green-light: #E8F5E9;
+    --amber: #D4870E;
+    --amber-light: #FFF3E0;
+    --red: #C0392B;
+    --red-light: #FDEDEC;
+    --purple: #6B4C9A;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    --radius: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-100); color: var(--gray-800); }
+
+  /* Cover page */
+  .cover { background: var(--kensho-blue); color: white; padding: 80px 40px; text-align: center; margin-bottom: 40px; }
+  .cover h1 { font-size: 42px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .cover .subtitle { font-size: 20px; color: rgba(255,255,255,0.7); margin-bottom: 40px; }
+  .cover .label { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* Section headers */
+  .section-header { max-width: 1200px; margin: 60px auto 24px; padding: 0 20px; }
+  .section-header h2 { font-size: 28px; color: var(--kensho-blue); font-weight: 700; }
+  .section-header p { font-size: 15px; color: var(--gray-500); margin-top: 6px; }
+
+  /* Mockup frame */
+  .mockup-frame { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
+  .browser-chrome { background: var(--gray-200); border-radius: 12px 12px 0 0; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
+  .browser-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .browser-dot.r { background: #FF5F57; }
+  .browser-dot.y { background: #FEBC2E; }
+  .browser-dot.g { background: #28C840; }
+  .browser-url { background: white; border-radius: 6px; padding: 6px 14px; margin-left: 12px; font-size: 13px; color: var(--gray-500); flex: 1; }
+  .app-container { background: white; border: 1px solid var(--gray-200); border-top: none; border-radius: 0 0 12px 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+
+  /* Sidebar */
+  .app-layout { display: flex; min-height: 700px; }
+  .sidebar { width: 220px; background: var(--kensho-blue); color: white; padding: 20px 0; flex-shrink: 0; }
+  .sidebar-logo { padding: 0 20px 20px; font-size: 18px; font-weight: 700; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 12px; }
+  .sidebar-logo span { color: var(--accent-blue); font-size: 11px; display: block; font-weight: 400; margin-top: 2px; letter-spacing: 0; }
+  .nav-item { padding: 10px 20px; font-size: 14px; color: rgba(255,255,255,0.6); cursor: pointer; display: flex; align-items: center; gap: 10px; }
+  .nav-item.active { background: rgba(255,255,255,0.1); color: white; border-left: 3px solid var(--accent-blue); }
+  .nav-item:hover { background: rgba(255,255,255,0.05); }
+  .nav-icon { width: 18px; text-align: center; }
+
+  /* Main content */
+  .main-content { flex: 1; padding: 24px 28px; background: var(--gray-50); overflow: hidden; }
+  .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+  .page-title { font-size: 22px; font-weight: 700; color: var(--gray-900); }
+
+  /* Cards */
+  .card { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .card-title { font-size: 13px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+
+  /* Badges */
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .badge-green { background: var(--green-light); color: var(--green); }
+  .badge-amber { background: var(--amber-light); color: var(--amber); }
+  .badge-red { background: var(--red-light); color: var(--red); }
+  .badge-blue { background: var(--light-blue); color: var(--accent-blue); }
+  .badge-purple { background: #F3E5F5; color: var(--purple); }
+
+  /* Table */
+  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .data-table th { text-align: left; padding: 10px 12px; background: var(--gray-50); color: var(--gray-500); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid var(--gray-200); }
+  .data-table td { padding: 12px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
+  .data-table tr:hover { background: var(--gray-50); }
+  .data-table .account-link { color: var(--accent-blue); font-weight: 600; text-decoration: none; }
+
+  /* Stats row */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+  .stat-card { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 16px 20px; }
+  .stat-value { font-size: 28px; font-weight: 700; color: var(--gray-900); }
+  .stat-label { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+  .stat-change { font-size: 12px; margin-top: 4px; }
+  .stat-change.up { color: var(--green); }
+  .stat-change.down { color: var(--red); }
+
+  /* Account 360 specific */
+  .account-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-200); }
+  .account-avatar { width: 48px; height: 48px; background: var(--kensho-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 18px; }
+  .account-name { font-size: 24px; font-weight: 700; color: var(--gray-900); }
+  .account-meta { font-size: 13px; color: var(--gray-500); margin-top: 2px; }
+  .account-badges { display: flex; gap: 8px; margin-left: auto; }
+
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .detail-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+  /* Timeline */
+  .timeline-item { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--gray-100); }
+  .timeline-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  .timeline-content { flex: 1; }
+  .timeline-meta { font-size: 11px; color: var(--gray-400); margin-bottom: 4px; }
+  .timeline-text { font-size: 13px; color: var(--gray-700); line-height: 1.5; }
+
+  /* Chart mockup */
+  .chart-area { height: 180px; background: linear-gradient(180deg, rgba(43,122,184,0.05) 0%, rgba(43,122,184,0.02) 100%); border-radius: 6px; position: relative; overflow: hidden; border: 1px solid var(--gray-100); }
+  .chart-line { position: absolute; bottom: 20px; left: 20px; right: 20px; height: 120px; }
+  .chart-svg { width: 100%; height: 100%; }
+  .chart-labels { display: flex; justify-content: space-between; padding: 0 20px; margin-top: 4px; }
+  .chart-labels span { font-size: 10px; color: var(--gray-400); }
+
+  /* Product intel charts */
+  .bar-chart { display: flex; align-items: flex-end; gap: 12px; height: 160px; padding: 0 8px; }
+  .bar-item { flex: 1; display: flex; flex-direction: column; align-items: center; }
+  .bar { border-radius: 4px 4px 0 0; width: 100%; min-width: 30px; transition: height 0.3s; }
+  .bar-label { font-size: 10px; color: var(--gray-500); margin-top: 6px; text-align: center; }
+  .bar-value { font-size: 11px; font-weight: 600; color: var(--gray-700); margin-bottom: 4px; }
+
+  /* Donut mockup */
+  .donut-container { display: flex; align-items: center; gap: 24px; }
+  .donut-svg { width: 140px; height: 140px; }
+  .donut-legend { display: flex; flex-direction: column; gap: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-600); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 3px; }
+
+  /* Signal badges for usage-revenue */
+  .signal { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .signal-strong { background: var(--green-light); color: var(--green); }
+  .signal-risk { background: var(--red-light); color: var(--red); }
+  .signal-opportunity { background: var(--amber-light); color: var(--amber); }
+
+  /* Buttons */
+  .btn { padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; border: none; cursor: pointer; }
+  .btn-primary { background: var(--accent-blue); color: white; }
+  .btn-outline { background: white; color: var(--gray-600); border: 1px solid var(--gray-300); }
+  .btn-sm { padding: 5px 12px; font-size: 12px; }
+
+  /* Filters bar */
+  .filters-bar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .filter-chip { padding: 5px 12px; border-radius: 6px; font-size: 12px; background: white; border: 1px solid var(--gray-300); color: var(--gray-600); cursor: pointer; }
+  .filter-chip.active { background: var(--light-blue); border-color: var(--accent-blue); color: var(--accent-blue); }
+
+  /* Search */
+  .search-box { padding: 8px 14px; border-radius: 6px; border: 1px solid var(--gray-300); font-size: 13px; width: 260px; background: white; }
+
+  /* Scatter plot mockup */
+  .scatter-container { position: relative; height: 280px; background: white; border: 1px solid var(--gray-100); border-radius: 6px; padding: 20px; }
+  .scatter-dot { position: absolute; width: 20px; height: 20px; border-radius: 50%; opacity: 0.85; display: flex; align-items: center; justify-content: center; font-size: 8px; color: white; font-weight: 700; cursor: pointer; }
+  .scatter-axis-x { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; font-size: 11px; color: var(--gray-400); }
+  .scatter-axis-y { position: absolute; left: 8px; top: 50%; transform: rotate(-90deg) translateX(-50%); font-size: 11px; color: var(--gray-400); white-space: nowrap; }
+
+  /* Quick actions */
+  .quick-actions { display: flex; gap: 8px; }
+
+  /* Trial card */
+  .trial-card { background: var(--light-blue); border: 1px solid #B8D8F0; border-radius: var(--radius); padding: 16px; }
+  .trial-progress { height: 6px; background: var(--gray-200); border-radius: 3px; margin-top: 12px; overflow: hidden; }
+  .trial-progress-fill { height: 100%; border-radius: 3px; background: var(--accent-blue); }
+
+  /* Slack mockup */
+  .slack-mockup { background: #1A1D21; border-radius: var(--radius); padding: 16px; color: #D1D2D3; font-size: 13px; margin-bottom: 16px; }
+  .slack-msg { display: flex; gap: 10px; margin-bottom: 14px; }
+  .slack-avatar { width: 32px; height: 32px; border-radius: 4px; flex-shrink: 0; }
+  .slack-name { font-weight: 700; color: white; font-size: 14px; }
+  .slack-time { font-size: 11px; color: #616061; margin-left: 6px; }
+  .slack-text { margin-top: 4px; line-height: 1.5; color: #D1D2D3; }
+  .slack-bot-card { background: #222529; border-left: 3px solid var(--accent-blue); border-radius: 0 6px 6px 0; padding: 12px; margin-top: 8px; }
+  .slack-field { margin-bottom: 6px; }
+  .slack-field-label { font-size: 11px; color: #9B9C9E; font-weight: 600; }
+  .slack-field-value { font-size: 13px; color: #D1D2D3; }
+  .slack-buttons { display: flex; gap: 6px; margin-top: 10px; }
+  .slack-btn { padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid #565856; color: #D1D2D3; background: transparent; }
+  .slack-btn.confirm { border-color: var(--green); color: var(--green); }
+
+  /* Annotation labels */
+  .annotation { position: relative; }
+  .annotation-label { position: absolute; background: var(--kensho-blue); color: white; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; z-index: 10; }
+  .annotation-label::after { content: ''; position: absolute; width: 0; height: 0; }
+
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; margin: 2px; }
+  .tag-blue { background: var(--light-blue); color: var(--accent-blue); }
+  .tag-purple { background: #F3E5F5; color: var(--purple); }
+  .tag-green { background: var(--green-light); color: var(--green); }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <div class="label">UI Mockups &amp; Design Reference</div>
+  <h1 style="margin-top:24px">Kensho CIP</h1>
+  <div class="subtitle">Customer Intelligence Platform — Interface Design</div>
+  <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-top:32px">February 2026 &nbsp;|&nbsp; GTM Engineering &nbsp;|&nbsp; 4 Key Views</p>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- VIEW 1: PIPELINE DASHBOARD -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section-header">
+  <h2>View 1: Pipeline &amp; Engagement Dashboard</h2>
+  <p>The home page. A sortable, filterable list of all accounts with at-a-glance status indicators.</p>
+</div>
+<div class="mockup-frame">
+  <div class="browser-chrome">
+    <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+    <div class="browser-url">cip.kensho.com</div>
+  </div>
+  <div class="app-container">
+    <div class="app-layout">
+      <div class="sidebar">
+        <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
+        <div class="nav-item active"><span class="nav-icon">■</span> Pipeline</div>
+        <div class="nav-item"><span class="nav-icon">●</span> Accounts</div>
+        <div class="nav-item"><span class="nav-icon">▲</span> Product Intel</div>
+        <div class="nav-item"><span class="nav-icon">▬</span> Usage Matrix</div>
+        <div class="nav-item" style="margin-top:auto; border-top:1px solid rgba(255,255,255,0.1); padding-top:16px"><span class="nav-icon">⚙</span> Settings</div>
+      </div>
+      <div class="main-content">
+        <div class="page-header">
+          <div class="page-title">Pipeline Dashboard</div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <input class="search-box" placeholder="Search accounts...">
+            <button class="btn btn-primary">+ Add Account</button>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-value">42</div><div class="stat-label">Total Accounts</div><div class="stat-change up">+3 this week</div></div>
+          <div class="stat-card"><div class="stat-value">8</div><div class="stat-label">Active Trials</div><div class="stat-change up">2 ending soon</div></div>
+          <div class="stat-card"><div class="stat-value">$4.2M</div><div class="stat-label">Total Pipeline Value</div><div class="stat-change up">+12% MoM</div></div>
+          <div class="stat-card"><div class="stat-value">3.2d</div><div class="stat-label">Avg Days Since Update</div><div class="stat-change up">Down from 14d</div></div>
+        </div>
+
+        <div class="filters-bar">
+          <div class="filter-chip active">All Accounts</div>
+          <div class="filter-chip">Prospects</div>
+          <div class="filter-chip">Active Trials</div>
+          <div class="filter-chip">Customers</div>
+          <div class="filter-chip">Stale (7d+)</div>
+          <div class="filter-chip">My Accounts</div>
+        </div>
+
+        <div class="card" style="padding:0; overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th>Status</th>
+                <th>Deal Stage</th>
+                <th>Total Value</th>
+                <th>Trial</th>
+                <th>Usage (7d avg)</th>
+                <th>Last Meeting</th>
+                <th>Last Update</th>
+                <th>Owner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Vanguard Group</a></td>
+                <td><span class="badge badge-amber">Trial</span></td>
+                <td>Negotiation</td>
+                <td>$680K</td>
+                <td><span class="badge badge-blue">47d left</span></td>
+                <td style="font-weight:600;color:var(--green)">2,340/day ↑</td>
+                <td>Feb 21</td>
+                <td><span style="color:var(--green)">1d ago</span></td>
+                <td>Sarah M.</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">JPMorgan Chase</a></td>
+                <td><span class="badge badge-green">Customer</span></td>
+                <td>Closed Won</td>
+                <td>$1.2M</td>
+                <td>—</td>
+                <td style="font-weight:600;color:var(--green)">8,920/day ↑</td>
+                <td>Feb 19</td>
+                <td><span style="color:var(--green)">2d ago</span></td>
+                <td>Mike T.</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Goldman Sachs</a></td>
+                <td><span class="badge badge-amber">Trial</span></td>
+                <td>Evaluation</td>
+                <td>$520K</td>
+                <td><span class="badge badge-red">8d left</span></td>
+                <td style="font-weight:600;color:var(--red)">120/day ↓</td>
+                <td>Feb 10</td>
+                <td><span style="color:var(--red)">12d ago</span></td>
+                <td>Sarah M.</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">BlackRock</a></td>
+                <td><span class="badge badge-blue">Prospect</span></td>
+                <td>Discovery</td>
+                <td>$340K</td>
+                <td>—</td>
+                <td style="color:var(--gray-400)">—</td>
+                <td>Feb 18</td>
+                <td><span style="color:var(--green)">3d ago</span></td>
+                <td>Alex K.</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Citadel</a></td>
+                <td><span class="badge badge-green">Customer</span></td>
+                <td>Closed Won</td>
+                <td>$890K</td>
+                <td>—</td>
+                <td style="font-weight:600;color:var(--amber)">1,050/day →</td>
+                <td>Jan 28</td>
+                <td><span style="color:var(--amber)">8d ago</span></td>
+                <td>Mike T.</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Fidelity</a></td>
+                <td><span class="badge badge-blue">Prospect</span></td>
+                <td>Qualification</td>
+                <td>$450K</td>
+                <td>—</td>
+                <td style="color:var(--gray-400)">—</td>
+                <td>Feb 20</td>
+                <td><span style="color:var(--green)">2d ago</span></td>
+                <td>Sarah M.</td>
+              </tr>
+              <tr style="background:#FFF8F0">
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">State Street</a></td>
+                <td><span class="badge badge-green">Retained</span></td>
+                <td>Renewal</td>
+                <td>$560K</td>
+                <td>—</td>
+                <td style="font-weight:600;color:var(--red)">210/day ↓</td>
+                <td>Jan 15</td>
+                <td><span style="color:var(--red)">18d ago ⚠</span></td>
+                <td>Alex K.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- VIEW 2: ACCOUNT 360 -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section-header">
+  <h2>View 2: Account 360</h2>
+  <p>The centerpiece. A single page per account showing everything Kensho knows about that company.</p>
+</div>
+<div class="mockup-frame">
+  <div class="browser-chrome">
+    <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+    <div class="browser-url">cip.kensho.com/accounts/vanguard-group</div>
+  </div>
+  <div class="app-container">
+    <div class="app-layout">
+      <div class="sidebar">
+        <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
+        <div class="nav-item"><span class="nav-icon">■</span> Pipeline</div>
+        <div class="nav-item active"><span class="nav-icon">●</span> Accounts</div>
+        <div class="nav-item"><span class="nav-icon">▲</span> Product Intel</div>
+        <div class="nav-item"><span class="nav-icon">▬</span> Usage Matrix</div>
+      </div>
+      <div class="main-content" style="overflow-y:auto; max-height:900px;">
+        <!-- Account Header -->
+        <div class="account-header">
+          <div class="account-avatar">VG</div>
+          <div>
+            <div class="account-name">Vanguard Group</div>
+            <div class="account-meta">S&amp;P Rep: John Davidson &nbsp;|&nbsp; Kensho: Sarah Martinez &nbsp;|&nbsp; vanguard.com</div>
+          </div>
+          <div class="account-badges">
+            <span class="badge badge-amber" style="font-size:14px; padding:6px 14px;">Trial — Active</span>
+            <span class="badge badge-blue" style="font-size:14px; padding:6px 14px;">47 days left</span>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions" style="margin-bottom:20px">
+          <button class="btn btn-primary btn-sm">+ Add Note</button>
+          <button class="btn btn-outline btn-sm">Log Meeting</button>
+          <button class="btn btn-outline btn-sm">Update Trial</button>
+          <button class="btn btn-outline btn-sm">Edit Product Interest</button>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-value">$680K</div><div class="stat-label">Total Account Value</div><div style="font-size:11px;color:var(--gray-400);margin-top:4px">Direct: $420K | Indirect: $260K</div></div>
+          <div class="stat-card"><div class="stat-value">2,340</div><div class="stat-label">API Calls / Day (7d avg)</div><div class="stat-change up">↑ 34% vs last week</div></div>
+          <div class="stat-card"><div class="stat-value">Feb 21</div><div class="stat-label">Last Meeting</div><div style="font-size:11px;color:var(--gray-400);margin-top:4px">3 days ago</div></div>
+          <div class="stat-card"><div class="stat-value">1d</div><div class="stat-label">Since Last Update</div><div class="stat-change up">Fresh</div></div>
+        </div>
+
+        <div class="detail-grid">
+          <!-- Trial Status -->
+          <div class="card">
+            <div class="card-title">Active Trial</div>
+            <div class="trial-card">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-weight:700;font-size:15px;color:var(--kensho-blue)">LRA — MCP Connector (Claude)</div>
+                  <div style="font-size:13px;color:var(--gray-500);margin-top:4px">Mar 1 → May 29, 2026 &nbsp;|&nbsp; 90 days</div>
+                </div>
+                <span class="badge badge-blue" style="font-size:13px">47 days remaining</span>
+              </div>
+              <div class="trial-progress" style="margin-top:14px">
+                <div class="trial-progress-fill" style="width:48%"></div>
+              </div>
+              <div style="margin-top:12px">
+                <div style="font-size:12px;font-weight:600;color:var(--gray-500)">Success Criteria</div>
+                <div style="font-size:13px;color:var(--gray-700);margin-top:4px">500 queries/day sustained over 2 consecutive weeks. Currently averaging 2,340/day.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Interest -->
+          <div class="card">
+            <div class="card-title">Product Interest</div>
+            <div style="margin-bottom:12px">
+              <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px">LRA Implementation</div>
+              <span class="tag tag-blue">MCP Connector</span>
+            </div>
+            <div style="margin-bottom:12px">
+              <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px">MCP Platform</div>
+              <span class="tag tag-purple">Claude</span>
+            </div>
+            <div style="margin-bottom:12px">
+              <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px">Grounding Interest</div>
+              <span class="tag tag-green">Yes — evaluating</span>
+            </div>
+            <div style="margin-bottom:12px">
+              <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px">Use Cases</div>
+              <span class="tag tag-blue">Quant Research</span>
+              <span class="tag tag-blue">Risk Analysis</span>
+              <span class="tag tag-blue">Portfolio Insights</span>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--gray-500);margin-bottom:4px">Personas</div>
+              <span class="tag tag-purple">Quant Researcher</span>
+              <span class="tag tag-purple">Portfolio Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usage Chart -->
+        <div class="card">
+          <div class="card-title">API Usage — Last 30 Days</div>
+          <div class="chart-area">
+            <div class="chart-line">
+              <svg class="chart-svg" viewBox="0 0 600 120" preserveAspectRatio="none">
+                <defs>
+                  <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2B7AB8;stop-opacity:0.3"></stop>
+                    <stop offset="100%" style="stop-color:#2B7AB8;stop-opacity:0.02"></stop>
+                  </lineargradient>
+                </defs>
+                <path d="M0,100 L20,95 L40,90 L60,88 L80,92 L100,85 L120,80 L140,78 L160,75 L180,70 L200,72 L220,65 L240,60 L260,55 L280,58 L300,50 L320,45 L340,48 L360,40 L380,35 L400,38 L420,30 L440,25 L460,20 L480,22 L500,15 L520,18 L540,12 L560,8 L580,10 L600,5 L600,120 L0,120 Z" fill="url(#gradient)"></path>
+                <path d="M0,100 L20,95 L40,90 L60,88 L80,92 L100,85 L120,80 L140,78 L160,75 L180,70 L200,72 L220,65 L240,60 L260,55 L280,58 L300,50 L320,45 L340,48 L360,40 L380,35 L400,38 L420,30 L440,25 L460,20 L480,22 L500,15 L520,18 L540,12 L560,8 L580,10 L600,5" stroke="#2B7AB8" stroke-width="2" fill="none"></path>
+                <!-- Trial start marker -->
+                <line x1="200" y1="0" x2="200" y2="120" stroke="#D4870E" stroke-width="1" stroke-dasharray="4,4"></line>
+                <text x="204" y="12" font-size="10" fill="#D4870E">Trial Start</text>
+              </svg>
+            </div>
+          </div>
+          <div class="chart-labels">
+            <span>Jan 25</span><span>Feb 1</span><span>Feb 8</span><span>Feb 15</span><span>Feb 22</span>
+          </div>
+        </div>
+
+        <!-- Deal History + Contacts -->
+        <div class="detail-grid">
+          <div class="card">
+            <div class="card-title">Deal History (from SFDC)</div>
+            <table class="data-table" style="font-size:12px">
+              <thead><tr><th>Opportunity</th><th>Stage</th><th>Value</th><th>Close</th></tr></thead>
+              <tbody>
+                <tr><td style="font-weight:600">LRA MCP - 2026</td><td><span class="badge badge-amber">Negotiation</span></td><td>$420K</td><td>Jun 2026</td></tr>
+                <tr><td style="font-weight:600">Grounding Eval</td><td><span class="badge badge-blue">Discovery</span></td><td>$260K</td><td>Q3 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <div class="card-title">Key Contacts</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:32px;height:32px;border-radius:50%;background:var(--accent-blue);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">SC</div>
+                <div><div style="font-size:13px;font-weight:600">Sarah Chen</div><div style="font-size:11px;color:var(--gray-400)">Head of Quant Research — Decision Maker</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:32px;height:32px;border-radius:50%;background:var(--purple);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">RP</div>
+                <div><div style="font-size:13px;font-weight:600">Raj Patel</div><div style="font-size:11px;color:var(--gray-400)">VP Engineering — Technical Evaluator</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:32px;height:32px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">LW</div>
+                <div><div style="font-size:13px;font-weight:600">Lisa Wong</div><div style="font-size:11px;color:var(--gray-400)">Legal &amp; Compliance — Blocker Owner</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engagement Timeline -->
+        <div class="card">
+          <div class="card-title">Engagement Timeline</div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--accent-blue)"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">Feb 21, 2026 &nbsp;|&nbsp; Call Notes &nbsp;|&nbsp; via Slack &nbsp;|&nbsp; Sarah M.</div>
+              <div class="timeline-text"><strong>Demo call with Sarah Chen and Raj Patel.</strong> They've exceeded success criteria — 2,340 queries/day sustained for 3 weeks. Raj wants to discuss scaling to their London office. Sarah asked about Grounding for their risk team. <span style="color:var(--accent-blue)">Next step:</span> Schedule Grounding demo for risk team by Mar 1.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--purple)"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">Feb 18, 2026 &nbsp;|&nbsp; Email Thread &nbsp;|&nbsp; via cip@kensho.com &nbsp;|&nbsp; Auto-captured</div>
+              <div class="timeline-text">Email thread between Sarah M. and Raj Patel re: MCP connector integration timeline. Raj confirmed their eng team has capacity to integrate in Q2. Mentioned they're also evaluating ChatGPT connector as backup.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--amber)"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">Feb 14, 2026 &nbsp;|&nbsp; Blocker Update &nbsp;|&nbsp; via Slack &nbsp;|&nbsp; Mike T.</div>
+              <div class="timeline-text"><strong>Blocker resolved:</strong> Legal (Lisa Wong) completed data terms review. MSA redline sent back with minor changes. <span style="color:var(--green)">No longer blocking.</span></div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--green)"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">Feb 10, 2026 &nbsp;|&nbsp; Meeting &nbsp;|&nbsp; via Calendar Invite &nbsp;|&nbsp; Auto-detected</div>
+              <div class="timeline-text">Meeting: "Vanguard LRA Trial Check-in" — Attendees: Sarah M., Mike T., Sarah Chen, Raj Patel (60 min)</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--gray-300)"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">Mar 1, 2026 &nbsp;|&nbsp; System Event</div>
+              <div class="timeline-text" style="color:var(--gray-400)">Trial started: LRA MCP Connector (Claude) — 90-day evaluation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- VIEW 3: PRODUCT INTELLIGENCE -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section-header">
+  <h2>View 3: Product Intelligence Dashboard</h2>
+  <p>Aggregate analytics on what customers want. Directly informs product direction.</p>
+</div>
+<div class="mockup-frame">
+  <div class="browser-chrome">
+    <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+    <div class="browser-url">cip.kensho.com/product-intelligence</div>
+  </div>
+  <div class="app-container">
+    <div class="app-layout">
+      <div class="sidebar">
+        <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
+        <div class="nav-item"><span class="nav-icon">■</span> Pipeline</div>
+        <div class="nav-item"><span class="nav-icon">●</span> Accounts</div>
+        <div class="nav-item active"><span class="nav-icon">▲</span> Product Intel</div>
+        <div class="nav-item"><span class="nav-icon">▬</span> Usage Matrix</div>
+      </div>
+      <div class="main-content">
+        <div class="page-header">
+          <div class="page-title">Product Intelligence</div>
+          <div class="filters-bar" style="margin:0">
+            <div class="filter-chip active">All Time</div>
+            <div class="filter-chip">Last 90 Days</div>
+            <div class="filter-chip">Last 30 Days</div>
+          </div>
+        </div>
+
+        <div class="detail-grid" style="margin-top:8px">
+          <!-- Implementation Breakdown -->
+          <div class="card">
+            <div class="card-title">LRA Implementation Type</div>
+            <div class="donut-container">
+              <svg class="donut-svg" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="20"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#2B7AB8" stroke-width="20" stroke-dasharray="125 189" stroke-dashoffset="0" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#6B4C9A" stroke-width="20" stroke-dasharray="95 219" stroke-dashoffset="-125" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#9CA3AF" stroke-width="20" stroke-dasharray="94 220" stroke-dashoffset="-220" transform="rotate(-90 60 60)"></circle>
+                <text x="60" y="56" text-anchor="middle" font-size="18" font-weight="700" fill="#1F2937">42</text>
+                <text x="60" y="70" text-anchor="middle" font-size="9" fill="#6B7280">accounts</text>
+              </svg>
+              <div class="donut-legend">
+                <div class="legend-item"><div class="legend-dot" style="background:#2B7AB8"></div> MCP Connector — 18 (43%)</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#6B4C9A"></div> Kfinance API — 14 (33%)</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#9CA3AF"></div> Both / Undecided — 10 (24%)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MCP Platform Distribution -->
+          <div class="card">
+            <div class="card-title">MCP Platform Preferences (of 18 MCP accounts)</div>
+            <div class="bar-chart">
+              <div class="bar-item"><div class="bar-value">11</div><div class="bar" style="height:110px;background:#2B7AB8"></div><div class="bar-label">Claude</div></div>
+              <div class="bar-item"><div class="bar-value">7</div><div class="bar" style="height:70px;background:#6B4C9A"></div><div class="bar-label">ChatGPT</div></div>
+              <div class="bar-item"><div class="bar-value">4</div><div class="bar" style="height:40px;background:#D4870E"></div><div class="bar-label">Copilot</div></div>
+              <div class="bar-item"><div class="bar-value">3</div><div class="bar" style="height:30px;background:#2E8B57"></div><div class="bar-label">Mistral</div></div>
+              <div class="bar-item"><div class="bar-value">2</div><div class="bar" style="height:20px;background:#C0392B"></div><div class="bar-label">xAI</div></div>
+              <div class="bar-item"><div class="bar-value">1</div><div class="bar" style="height:10px;background:#9CA3AF"></div><div class="bar-label">Cohere</div></div>
+            </div>
+            <div style="font-size:11px;color:var(--gray-400);margin-top:8px;text-align:center">Note: Accounts may prefer multiple platforms</div>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <!-- Use Case Frequency -->
+          <div class="card">
+            <div class="card-title">Top Use Cases (across all accounts)</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="font-weight:600">Quant Research</span><span style="color:var(--gray-500)">24 accounts</span></div>
+                <div style="height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden"><div style="width:80%;height:100%;background:var(--accent-blue);border-radius:4px"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="font-weight:600">Risk Analysis</span><span style="color:var(--gray-500)">18 accounts</span></div>
+                <div style="height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden"><div style="width:60%;height:100%;background:var(--accent-blue);border-radius:4px"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="font-weight:600">Document Processing</span><span style="color:var(--gray-500)">14 accounts</span></div>
+                <div style="height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden"><div style="width:47%;height:100%;background:var(--accent-blue);border-radius:4px"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="font-weight:600">Compliance Monitoring</span><span style="color:var(--gray-500)">11 accounts</span></div>
+                <div style="height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden"><div style="width:37%;height:100%;background:var(--accent-blue);border-radius:4px"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="font-weight:600">Portfolio Insights</span><span style="color:var(--gray-500)">9 accounts</span></div>
+                <div style="height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden"><div style="width:30%;height:100%;background:var(--accent-blue);border-radius:4px"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span style="font-weight:600">Trading Support</span><span style="color:var(--gray-500)">6 accounts</span></div>
+                <div style="height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden"><div style="width:20%;height:100%;background:var(--accent-blue);border-radius:4px"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Persona Distribution -->
+          <div class="card">
+            <div class="card-title">Persona Types</div>
+            <div class="donut-container">
+              <svg class="donut-svg" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="18"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#2B7AB8" stroke-width="18" stroke-dasharray="110 204" stroke-dashoffset="0" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#6B4C9A" stroke-width="18" stroke-dasharray="75 239" stroke-dashoffset="-110" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#D4870E" stroke-width="18" stroke-dasharray="65 249" stroke-dashoffset="-185" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#2E8B57" stroke-width="18" stroke-dasharray="64 250" stroke-dashoffset="-250" transform="rotate(-90 60 60)"></circle>
+              </svg>
+              <div class="donut-legend">
+                <div class="legend-item"><div class="legend-dot" style="background:#2B7AB8"></div> Quant Researcher — 35%</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#6B4C9A"></div> Risk Analyst — 24%</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#D4870E"></div> Portfolio Manager — 21%</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#2E8B57"></div> Compliance Officer — 20%</div>
+              </div>
+            </div>
+            <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-100)">
+              <div class="card-title">Product Line Interest</div>
+              <div style="display:flex;gap:12px;margin-top:8px">
+                <div style="flex:1;text-align:center;padding:12px;background:var(--light-blue);border-radius:6px">
+                  <div style="font-size:24px;font-weight:700;color:var(--accent-blue)">38</div>
+                  <div style="font-size:12px;color:var(--gray-500)">LLM Ready API</div>
+                </div>
+                <div style="flex:1;text-align:center;padding:12px;background:var(--green-light);border-radius:6px">
+                  <div style="font-size:24px;font-weight:700;color:var(--green)">22</div>
+                  <div style="font-size:12px;color:var(--gray-500)">Grounding</div>
+                </div>
+                <div style="flex:1;text-align:center;padding:12px;background:#F3E5F5;border-radius:6px">
+                  <div style="font-size:24px;font-weight:700;color:var(--purple)">16</div>
+                  <div style="font-size:12px;color:var(--gray-500)">Both</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- VIEW 4: USAGE-REVENUE MATRIX -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section-header">
+  <h2>View 4: Usage-Revenue Matrix</h2>
+  <p>Correlates usage signals with deal status and revenue to surface conversion, churn, and expansion opportunities.</p>
+</div>
+<div class="mockup-frame">
+  <div class="browser-chrome">
+    <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+    <div class="browser-url">cip.kensho.com/usage-matrix</div>
+  </div>
+  <div class="app-container">
+    <div class="app-layout">
+      <div class="sidebar">
+        <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
+        <div class="nav-item"><span class="nav-icon">■</span> Pipeline</div>
+        <div class="nav-item"><span class="nav-icon">●</span> Accounts</div>
+        <div class="nav-item"><span class="nav-icon">▲</span> Product Intel</div>
+        <div class="nav-item active"><span class="nav-icon">▬</span> Usage Matrix</div>
+      </div>
+      <div class="main-content">
+        <div class="page-header">
+          <div class="page-title">Usage-Revenue Matrix</div>
+        </div>
+
+        <!-- Scatter Plot -->
+        <div class="card">
+          <div class="card-title">Usage vs. Account Value (bubble = account, color = status)</div>
+          <div class="scatter-container">
+            <div class="scatter-axis-y">API Calls / Day (7d avg) →</div>
+            <div class="scatter-axis-x">Account Value ($) →</div>
+            <!-- Quadrant labels -->
+            <div style="position:absolute;top:8px;left:30px;font-size:10px;color:var(--gray-300);font-weight:600">HIGH USAGE / LOW VALUE</div>
+            <div style="position:absolute;top:8px;right:8px;font-size:10px;color:var(--gray-300);font-weight:600">HIGH USAGE / HIGH VALUE</div>
+            <div style="position:absolute;bottom:24px;left:30px;font-size:10px;color:var(--gray-300);font-weight:600">LOW USAGE / LOW VALUE</div>
+            <div style="position:absolute;bottom:24px;right:8px;font-size:10px;color:var(--gray-300);font-weight:600">LOW USAGE / HIGH VALUE</div>
+            <!-- Quadrant lines -->
+            <div style="position:absolute;left:50%;top:20px;bottom:20px;width:1px;background:var(--gray-200)"></div>
+            <div style="position:absolute;top:50%;left:30px;right:8px;height:1px;background:var(--gray-200)"></div>
+            <!-- Dots -->
+            <div class="scatter-dot" style="left:78%;top:12%;width:28px;height:28px;background:var(--green)" title="JPMorgan">JP</div>
+            <div class="scatter-dot" style="left:58%;top:22%;width:24px;height:24px;background:var(--amber)" title="Vanguard">VG</div>
+            <div class="scatter-dot" style="left:68%;top:18%;width:26px;height:26px;background:var(--green)" title="Citadel">CT</div>
+            <div class="scatter-dot" style="left:45%;top:65%;width:22px;height:22px;background:var(--amber)" title="Goldman">GS</div>
+            <div class="scatter-dot" style="left:32%;top:55%;width:20px;height:20px;background:var(--accent-blue)" title="BlackRock">BR</div>
+            <div class="scatter-dot" style="left:55%;top:70%;width:22px;height:22px;background:var(--green)" title="State St">SS</div>
+            <div class="scatter-dot" style="left:38%;top:40%;width:20px;height:20px;background:var(--accent-blue)" title="Fidelity">FD</div>
+            <div class="scatter-dot" style="left:22%;top:30%;width:18px;height:18px;background:var(--amber)" title="BNY">BN</div>
+            <div class="scatter-dot" style="left:15%;top:20%;width:16px;height:16px;background:var(--accent-blue)" title="Bridgewater">BW</div>
+          </div>
+          <div style="display:flex;gap:16px;margin-top:8px;justify-content:center">
+            <div class="legend-item" style="font-size:12px"><div class="legend-dot" style="background:var(--green)"></div> Customer</div>
+            <div class="legend-item" style="font-size:12px"><div class="legend-dot" style="background:var(--amber)"></div> Trial</div>
+            <div class="legend-item" style="font-size:12px"><div class="legend-dot" style="background:var(--accent-blue)"></div> Prospect</div>
+          </div>
+        </div>
+
+        <!-- Signal Table -->
+        <div class="card" style="padding:0">
+          <div style="padding:16px 20px 8px"><div class="card-title" style="margin:0">Actionable Signals</div></div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Account</th><th>Status</th><th>Usage (7d)</th><th>Trend</th><th>Account Value</th><th>Signal</th><th>Recommended Action</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Vanguard Group</a></td>
+                <td><span class="badge badge-amber">Trial</span></td>
+                <td style="font-weight:600">2,340/day</td>
+                <td style="color:var(--green);font-weight:600">↑ +34%</td>
+                <td>$680K</td>
+                <td><span class="signal signal-strong">● Strong Convert</span></td>
+                <td style="font-size:12px">Exceeding trial criteria. Push for close.</td>
+              </tr>
+              <tr style="background:#FFF8F0">
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Goldman Sachs</a></td>
+                <td><span class="badge badge-amber">Trial</span></td>
+                <td style="font-weight:600">120/day</td>
+                <td style="color:var(--red);font-weight:600">↓ -60%</td>
+                <td>$520K</td>
+                <td><span class="signal signal-risk">● At-Risk Trial</span></td>
+                <td style="font-size:12px">Usage declining, 8 days left. Urgent outreach needed.</td>
+              </tr>
+              <tr style="background:#FFF8F0">
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">State Street</a></td>
+                <td><span class="badge badge-green">Retained</span></td>
+                <td style="font-weight:600">210/day</td>
+                <td style="color:var(--red);font-weight:600">↓ -45%</td>
+                <td>$560K</td>
+                <td><span class="signal signal-risk">● Churn Risk</span></td>
+                <td style="font-size:12px">Usage dropping. Engage before renewal (Apr).</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">JPMorgan Chase</a></td>
+                <td><span class="badge badge-green">Customer</span></td>
+                <td style="font-weight:600">8,920/day</td>
+                <td style="color:var(--green);font-weight:600">↑ +22%</td>
+                <td>$1.2M</td>
+                <td><span class="signal signal-strong">● Expansion</span></td>
+                <td style="font-size:12px">Highest usage. Explore additional teams/products.</td>
+              </tr>
+              <tr>
+                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">BNY Mellon</a></td>
+                <td><span class="badge badge-amber">Trial</span></td>
+                <td style="font-weight:600">1,800/day</td>
+                <td style="color:var(--green);font-weight:600">↑ +18%</td>
+                <td>$290K</td>
+                <td><span class="signal signal-opportunity">● Upsell</span></td>
+                <td style="font-size:12px">High usage relative to deal size. Explore larger commitment.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- BONUS: SLACK BOT -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section-header">
+  <h2>Bonus: Slack Bot Interaction</h2>
+  <p>How the natural language parsing and confirmation flow looks in Slack.</p>
+</div>
+<div class="mockup-frame">
+  <div class="browser-chrome" style="background:#1A1D21">
+    <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+    <div class="browser-url" style="background:#222529;color:#9B9C9E">#deal-updates</div>
+  </div>
+  <div style="background:#1A1D21; padding:24px; border-radius: 0 0 12px 12px; border:1px solid #333; border-top:none;">
+    <!-- User message -->
+    <div class="slack-msg">
+      <div class="slack-avatar" style="background:#4A9CC9"></div>
+      <div>
+        <div><span class="slack-name">Sarah Martinez</span><span class="slack-time">2:34 PM</span></div>
+        <div class="slack-text">Just got off a call with Vanguard. They've exceeded the 500 queries/day success criteria — averaging 2,340/day now. Sarah Chen asked about Grounding for their risk team. Raj wants to discuss scaling to London. Blocker on legal is resolved — Lisa signed off on data terms. Next step: schedule Grounding demo for risk team by March 1.</div>
+      </div>
+    </div>
+
+    <!-- Bot response -->
+    <div class="slack-msg">
+      <div class="slack-avatar" style="background:var(--kensho-blue);display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:700;border-radius:4px">CIP</div>
+      <div style="flex:1">
+        <div><span class="slack-name">Kensho CIP Bot</span> <span style="background:#222529;color:#9B9C9E;padding:1px 6px;border-radius:3px;font-size:10px;margin-left:4px">APP</span><span class="slack-time">2:34 PM</span></div>
+        <div class="slack-text">Parsed update for <strong style="color:#4A9CC9">Vanguard Group</strong>:</div>
+        <div class="slack-bot-card">
+          <div class="slack-field"><div class="slack-field-label">Update Type</div><div class="slack-field-value">Call Notes, Trial Update, Blocker Update, Product Interest</div></div>
+          <div class="slack-field"><div class="slack-field-label">Trial Status</div><div class="slack-field-value">Active — exceeding success criteria (2,340/day vs. 500/day target)</div></div>
+          <div class="slack-field"><div class="slack-field-label">New Product Interest</div><div class="slack-field-value">Grounding (for risk team)</div></div>
+          <div class="slack-field"><div class="slack-field-label">Blocker</div><div class="slack-field-value"><span style="color:#2E8B57">Resolved</span> — Legal data terms review complete</div></div>
+          <div class="slack-field"><div class="slack-field-label">Next Steps</div><div class="slack-field-value">Schedule Grounding demo for risk team by Mar 1</div></div>
+          <div class="slack-field"><div class="slack-field-label">Expansion Signal</div><div class="slack-field-value">London office scaling discussion initiated</div></div>
+          <div class="slack-buttons">
+            <button class="slack-btn confirm">✓ Confirm &amp; Save</button>
+            <button class="slack-btn">✎ Edit</button>
+            <button class="slack-btn">✕ Discard</button>
+          </div>
+        </div>
+        <div style="font-size:11px;color:#616061;margin-top:6px">
+          <a href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#" style="color:#4A9CC9;text-decoration:none">View Vanguard Group in CIP →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center; padding:60px 20px; color:var(--gray-400); font-size:14px;">
+  <p>Kensho Customer Intelligence Platform — UI Mockups</p>
+  <p style="margin-top:4px">Built by GTM Engineering | Kensho Technologies | An S&amp;P Global Company</p>
+</div>
+
+
+
+</body></html>
