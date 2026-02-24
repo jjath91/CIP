@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0232)file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kensho CIP — UI Mockups</title>
 <style>
@@ -191,13 +191,47 @@
   .tag-blue { background: var(--light-blue); color: var(--accent-blue); }
   .tag-purple { background: #F3E5F5; color: var(--purple); }
   .tag-green { background: var(--green-light); color: var(--green); }
+
+  /* Google Sheets mockup */
+  .sheets-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; background: white; border-bottom: 1px solid var(--gray-200); }
+  .sheets-title-area { display: flex; align-items: center; gap: 12px; }
+  .sheets-title { font-size: 16px; font-weight: 700; color: var(--gray-900); }
+  .sheets-toolbar { display: flex; gap: 10px; align-items: center; }
+  .sheets-badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .sheets-badge-green { background: var(--green-light); color: var(--green); }
+  .sheets-badge-blue { background: var(--light-blue); color: var(--accent-blue); }
+  .sheets-btn { padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid var(--gray-300); background: white; color: var(--gray-700); cursor: pointer; }
+  .sheets-btn-primary { background: var(--accent-blue); color: white; border-color: var(--accent-blue); }
+
+  .sheets-container { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .sheets-grid { overflow-x: auto; background: white; }
+  .sheets-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .sheets-table th { text-align: left; padding: 8px 6px; background: #F9FAFB; color: var(--gray-600); font-weight: 600; font-size: 11px; border-bottom: 1px solid var(--gray-200); border-right: 1px solid var(--gray-100); }
+  .sheets-table td { padding: 8px 6px; border-bottom: 1px solid #E8E8E8; border-right: 1px solid #E8E8E8; color: var(--gray-700); }
+  .sheets-table th:first-child, .sheets-table td:first-child { background: #F3F4F6; color: var(--gray-600); font-weight: 600; width: 140px; }
+  .sheets-table td:first-child { color: var(--gray-700); }
+  .sheets-table tr:nth-child(even) { background: #FAFBFC; }
+  .sheets-table tr:hover { background: #F8F9FB; }
+  .sheets-synced { border-left: 3px solid #2B7AB8; background: #F0F6FF; }
+  .sheets-pending { background: #FFFBF0; border-left: 3px solid #D4870E; }
+  .sheets-status-panel { position: absolute; top: 16px; right: 20px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 6px; padding: 12px 16px; font-size: 11px; min-width: 160px; }
+  .sheets-status-item { display: flex; justify-content: space-between; margin-bottom: 6px; color: var(--gray-600); }
+  .sheets-status-item:last-child { margin-bottom: 0; }
+  .sheets-status-label { font-weight: 600; }
+  .sheets-status-value { color: var(--gray-800); font-weight: 700; }
+  .sheets-tabs { display: flex; gap: 0; padding: 0 20px; background: white; border-bottom: 1px solid var(--gray-200); }
+  .sheets-tab { padding: 10px 16px; font-size: 12px; color: var(--gray-500); border-bottom: 2px solid transparent; cursor: pointer; font-weight: 500; }
+  .sheets-tab.active { color: var(--accent-blue); border-bottom-color: var(--accent-blue); }
+  .sheets-legend { display: flex; gap: 24px; padding: 12px 20px; background: #F9FAFB; border-top: 1px solid var(--gray-200); font-size: 11px; color: var(--gray-600); }
+  .sheets-legend-item { display: flex; align-items: center; gap: 6px; }
+  .sheets-legend-dot { width: 12px; height: 12px; border-radius: 2px; }
 </style>
 </head>
 <body>
 
 <!-- Cover -->
 <div class="cover">
-  <div class="label">UI Mockups &amp; Design Reference</div>
+  <div class="label">UI Mockups & Design Reference</div>
   <h1 style="margin-top:24px">Kensho CIP</h1>
   <div class="subtitle">Customer Intelligence Platform — Interface Design</div>
   <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-top:32px">February 2026 &nbsp;|&nbsp; GTM Engineering &nbsp;|&nbsp; 4 Key Views</p>
@@ -207,7 +241,7 @@
 <!-- VIEW 1: PIPELINE DASHBOARD -->
 <!-- ═══════════════════════════════════════ -->
 <div class="section-header">
-  <h2>View 1: Pipeline &amp; Engagement Dashboard</h2>
+  <h2>View 1: Pipeline & Engagement Dashboard</h2>
   <p>The home page. A sortable, filterable list of all accounts with at-a-glance status indicators.</p>
 </div>
 <div class="mockup-frame">
@@ -219,17 +253,17 @@
     <div class="app-layout">
       <div class="sidebar">
         <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
-        <div class="nav-item active"><span class="nav-icon">■</span> Pipeline</div>
-        <div class="nav-item"><span class="nav-icon">●</span> Accounts</div>
-        <div class="nav-item"><span class="nav-icon">▲</span> Product Intel</div>
-        <div class="nav-item"><span class="nav-icon">▬</span> Usage Matrix</div>
-        <div class="nav-item" style="margin-top:auto; border-top:1px solid rgba(255,255,255,0.1); padding-top:16px"><span class="nav-icon">⚙</span> Settings</div>
+        <div class="nav-item active"><span class="nav-icon">&#9632;</span> Pipeline</div>
+        <div class="nav-item"><span class="nav-icon">&#9679;</span> Accounts</div>
+        <div class="nav-item"><span class="nav-icon">&#9650;</span> Product Intel</div>
+        <div class="nav-item"><span class="nav-icon">&#9644;</span> Usage Matrix</div>
+        <div class="nav-item" style="margin-top:auto; border-top:1px solid rgba(255,255,255,0.1); padding-top:16px"><span class="nav-icon">&#9881;</span> Settings</div>
       </div>
       <div class="main-content">
         <div class="page-header">
           <div class="page-title">Pipeline Dashboard</div>
           <div style="display:flex;gap:8px;align-items:center">
-            <input class="search-box" placeholder="Search accounts...">
+            <input class="search-box" placeholder="Search accounts..." />
             <button class="btn btn-primary">+ Add Account</button>
           </div>
         </div>
@@ -267,40 +301,40 @@
             </thead>
             <tbody>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Vanguard Group</a></td>
+                <td><a class="account-link" href="#">Vanguard Group</a></td>
                 <td><span class="badge badge-amber">Trial</span></td>
                 <td>Negotiation</td>
                 <td>$680K</td>
                 <td><span class="badge badge-blue">47d left</span></td>
-                <td style="font-weight:600;color:var(--green)">2,340/day ↑</td>
+                <td style="font-weight:600;color:var(--green)">2,340/day &#8593;</td>
                 <td>Feb 21</td>
                 <td><span style="color:var(--green)">1d ago</span></td>
                 <td>Sarah M.</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">JPMorgan Chase</a></td>
+                <td><a class="account-link" href="#">JPMorgan Chase</a></td>
                 <td><span class="badge badge-green">Customer</span></td>
                 <td>Closed Won</td>
                 <td>$1.2M</td>
                 <td>—</td>
-                <td style="font-weight:600;color:var(--green)">8,920/day ↑</td>
+                <td style="font-weight:600;color:var(--green)">8,920/day &#8593;</td>
                 <td>Feb 19</td>
                 <td><span style="color:var(--green)">2d ago</span></td>
                 <td>Mike T.</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Goldman Sachs</a></td>
+                <td><a class="account-link" href="#">Goldman Sachs</a></td>
                 <td><span class="badge badge-amber">Trial</span></td>
                 <td>Evaluation</td>
                 <td>$520K</td>
                 <td><span class="badge badge-red">8d left</span></td>
-                <td style="font-weight:600;color:var(--red)">120/day ↓</td>
+                <td style="font-weight:600;color:var(--red)">120/day &#8595;</td>
                 <td>Feb 10</td>
                 <td><span style="color:var(--red)">12d ago</span></td>
                 <td>Sarah M.</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">BlackRock</a></td>
+                <td><a class="account-link" href="#">BlackRock</a></td>
                 <td><span class="badge badge-blue">Prospect</span></td>
                 <td>Discovery</td>
                 <td>$340K</td>
@@ -311,18 +345,18 @@
                 <td>Alex K.</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Citadel</a></td>
+                <td><a class="account-link" href="#">Citadel</a></td>
                 <td><span class="badge badge-green">Customer</span></td>
                 <td>Closed Won</td>
                 <td>$890K</td>
                 <td>—</td>
-                <td style="font-weight:600;color:var(--amber)">1,050/day →</td>
+                <td style="font-weight:600;color:var(--amber)">1,050/day &#8594;</td>
                 <td>Jan 28</td>
                 <td><span style="color:var(--amber)">8d ago</span></td>
                 <td>Mike T.</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Fidelity</a></td>
+                <td><a class="account-link" href="#">Fidelity</a></td>
                 <td><span class="badge badge-blue">Prospect</span></td>
                 <td>Qualification</td>
                 <td>$450K</td>
@@ -333,14 +367,14 @@
                 <td>Sarah M.</td>
               </tr>
               <tr style="background:#FFF8F0">
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">State Street</a></td>
+                <td><a class="account-link" href="#">State Street</a></td>
                 <td><span class="badge badge-green">Retained</span></td>
                 <td>Renewal</td>
                 <td>$560K</td>
                 <td>—</td>
-                <td style="font-weight:600;color:var(--red)">210/day ↓</td>
+                <td style="font-weight:600;color:var(--red)">210/day &#8595;</td>
                 <td>Jan 15</td>
-                <td><span style="color:var(--red)">18d ago ⚠</span></td>
+                <td><span style="color:var(--red)">18d ago &#9888;</span></td>
                 <td>Alex K.</td>
               </tr>
             </tbody>
@@ -367,10 +401,10 @@
     <div class="app-layout">
       <div class="sidebar">
         <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
-        <div class="nav-item"><span class="nav-icon">■</span> Pipeline</div>
-        <div class="nav-item active"><span class="nav-icon">●</span> Accounts</div>
-        <div class="nav-item"><span class="nav-icon">▲</span> Product Intel</div>
-        <div class="nav-item"><span class="nav-icon">▬</span> Usage Matrix</div>
+        <div class="nav-item"><span class="nav-icon">&#9632;</span> Pipeline</div>
+        <div class="nav-item active"><span class="nav-icon">&#9679;</span> Accounts</div>
+        <div class="nav-item"><span class="nav-icon">&#9650;</span> Product Intel</div>
+        <div class="nav-item"><span class="nav-icon">&#9644;</span> Usage Matrix</div>
       </div>
       <div class="main-content" style="overflow-y:auto; max-height:900px;">
         <!-- Account Header -->
@@ -378,7 +412,7 @@
           <div class="account-avatar">VG</div>
           <div>
             <div class="account-name">Vanguard Group</div>
-            <div class="account-meta">S&amp;P Rep: John Davidson &nbsp;|&nbsp; Kensho: Sarah Martinez &nbsp;|&nbsp; vanguard.com</div>
+            <div class="account-meta">S&P Rep: John Davidson &nbsp;|&nbsp; Kensho: Sarah Martinez &nbsp;|&nbsp; vanguard.com</div>
           </div>
           <div class="account-badges">
             <span class="badge badge-amber" style="font-size:14px; padding:6px 14px;">Trial — Active</span>
@@ -397,7 +431,7 @@
         <!-- Stats Row -->
         <div class="stats-row">
           <div class="stat-card"><div class="stat-value">$680K</div><div class="stat-label">Total Account Value</div><div style="font-size:11px;color:var(--gray-400);margin-top:4px">Direct: $420K | Indirect: $260K</div></div>
-          <div class="stat-card"><div class="stat-value">2,340</div><div class="stat-label">API Calls / Day (7d avg)</div><div class="stat-change up">↑ 34% vs last week</div></div>
+          <div class="stat-card"><div class="stat-value">2,340</div><div class="stat-label">API Calls / Day (7d avg)</div><div class="stat-change up">&#8593; 34% vs last week</div></div>
           <div class="stat-card"><div class="stat-value">Feb 21</div><div class="stat-label">Last Meeting</div><div style="font-size:11px;color:var(--gray-400);margin-top:4px">3 days ago</div></div>
           <div class="stat-card"><div class="stat-value">1d</div><div class="stat-label">Since Last Update</div><div class="stat-change up">Fresh</div></div>
         </div>
@@ -460,15 +494,15 @@
             <div class="chart-line">
               <svg class="chart-svg" viewBox="0 0 600 120" preserveAspectRatio="none">
                 <defs>
-                  <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style="stop-color:#2B7AB8;stop-opacity:0.3"></stop>
-                    <stop offset="100%" style="stop-color:#2B7AB8;stop-opacity:0.02"></stop>
-                  </lineargradient>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2B7AB8;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#2B7AB8;stop-opacity:0.02" />
+                  </linearGradient>
                 </defs>
-                <path d="M0,100 L20,95 L40,90 L60,88 L80,92 L100,85 L120,80 L140,78 L160,75 L180,70 L200,72 L220,65 L240,60 L260,55 L280,58 L300,50 L320,45 L340,48 L360,40 L380,35 L400,38 L420,30 L440,25 L460,20 L480,22 L500,15 L520,18 L540,12 L560,8 L580,10 L600,5 L600,120 L0,120 Z" fill="url(#gradient)"></path>
-                <path d="M0,100 L20,95 L40,90 L60,88 L80,92 L100,85 L120,80 L140,78 L160,75 L180,70 L200,72 L220,65 L240,60 L260,55 L280,58 L300,50 L320,45 L340,48 L360,40 L380,35 L400,38 L420,30 L440,25 L460,20 L480,22 L500,15 L520,18 L540,12 L560,8 L580,10 L600,5" stroke="#2B7AB8" stroke-width="2" fill="none"></path>
+                <path d="M0,100 L20,95 L40,90 L60,88 L80,92 L100,85 L120,80 L140,78 L160,75 L180,70 L200,72 L220,65 L240,60 L260,55 L280,58 L300,50 L320,45 L340,48 L360,40 L380,35 L400,38 L420,30 L440,25 L460,20 L480,22 L500,15 L520,18 L540,12 L560,8 L580,10 L600,5 L600,120 L0,120 Z" fill="url(#gradient)" />
+                <path d="M0,100 L20,95 L40,90 L60,88 L80,92 L100,85 L120,80 L140,78 L160,75 L180,70 L200,72 L220,65 L240,60 L260,55 L280,58 L300,50 L320,45 L340,48 L360,40 L380,35 L400,38 L420,30 L440,25 L460,20 L480,22 L500,15 L520,18 L540,12 L560,8 L580,10 L600,5" stroke="#2B7AB8" stroke-width="2" fill="none" />
                 <!-- Trial start marker -->
-                <line x1="200" y1="0" x2="200" y2="120" stroke="#D4870E" stroke-width="1" stroke-dasharray="4,4"></line>
+                <line x1="200" y1="0" x2="200" y2="120" stroke="#D4870E" stroke-width="1" stroke-dasharray="4,4" />
                 <text x="204" y="12" font-size="10" fill="#D4870E">Trial Start</text>
               </svg>
             </div>
@@ -503,7 +537,7 @@
               </div>
               <div style="display:flex;align-items:center;gap:10px">
                 <div style="width:32px;height:32px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">LW</div>
-                <div><div style="font-size:13px;font-weight:600">Lisa Wong</div><div style="font-size:11px;color:var(--gray-400)">Legal &amp; Compliance — Blocker Owner</div></div>
+                <div><div style="font-size:13px;font-weight:600">Lisa Wong</div><div style="font-size:11px;color:var(--gray-400)">Legal & Compliance — Blocker Owner</div></div>
               </div>
             </div>
           </div>
@@ -569,10 +603,10 @@
     <div class="app-layout">
       <div class="sidebar">
         <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
-        <div class="nav-item"><span class="nav-icon">■</span> Pipeline</div>
-        <div class="nav-item"><span class="nav-icon">●</span> Accounts</div>
-        <div class="nav-item active"><span class="nav-icon">▲</span> Product Intel</div>
-        <div class="nav-item"><span class="nav-icon">▬</span> Usage Matrix</div>
+        <div class="nav-item"><span class="nav-icon">&#9632;</span> Pipeline</div>
+        <div class="nav-item"><span class="nav-icon">&#9679;</span> Accounts</div>
+        <div class="nav-item active"><span class="nav-icon">&#9650;</span> Product Intel</div>
+        <div class="nav-item"><span class="nav-icon">&#9644;</span> Usage Matrix</div>
       </div>
       <div class="main-content">
         <div class="page-header">
@@ -590,10 +624,13 @@
             <div class="card-title">LRA Implementation Type</div>
             <div class="donut-container">
               <svg class="donut-svg" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="20"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#2B7AB8" stroke-width="20" stroke-dasharray="125 189" stroke-dashoffset="0" transform="rotate(-90 60 60)"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#6B4C9A" stroke-width="20" stroke-dasharray="95 219" stroke-dashoffset="-125" transform="rotate(-90 60 60)"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#9CA3AF" stroke-width="20" stroke-dasharray="94 220" stroke-dashoffset="-220" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="20"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#2B7AB8" stroke-width="20"
+                  stroke-dasharray="125 189" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#6B4C9A" stroke-width="20"
+                  stroke-dasharray="95 219" stroke-dashoffset="-125" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#9CA3AF" stroke-width="20"
+                  stroke-dasharray="94 220" stroke-dashoffset="-220" transform="rotate(-90 60 60)"/>
                 <text x="60" y="56" text-anchor="middle" font-size="18" font-weight="700" fill="#1F2937">42</text>
                 <text x="60" y="70" text-anchor="middle" font-size="9" fill="#6B7280">accounts</text>
               </svg>
@@ -657,11 +694,11 @@
             <div class="card-title">Persona Types</div>
             <div class="donut-container">
               <svg class="donut-svg" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="18"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#2B7AB8" stroke-width="18" stroke-dasharray="110 204" stroke-dashoffset="0" transform="rotate(-90 60 60)"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#6B4C9A" stroke-width="18" stroke-dasharray="75 239" stroke-dashoffset="-110" transform="rotate(-90 60 60)"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#D4870E" stroke-width="18" stroke-dasharray="65 249" stroke-dashoffset="-185" transform="rotate(-90 60 60)"></circle>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#2E8B57" stroke-width="18" stroke-dasharray="64 250" stroke-dashoffset="-250" transform="rotate(-90 60 60)"></circle>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="18"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#2B7AB8" stroke-width="18" stroke-dasharray="110 204" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#6B4C9A" stroke-width="18" stroke-dasharray="75 239" stroke-dashoffset="-110" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#D4870E" stroke-width="18" stroke-dasharray="65 249" stroke-dashoffset="-185" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#2E8B57" stroke-width="18" stroke-dasharray="64 250" stroke-dashoffset="-250" transform="rotate(-90 60 60)"/>
               </svg>
               <div class="donut-legend">
                 <div class="legend-item"><div class="legend-dot" style="background:#2B7AB8"></div> Quant Researcher — 35%</div>
@@ -710,10 +747,10 @@
     <div class="app-layout">
       <div class="sidebar">
         <div class="sidebar-logo">KENSHO CIP <span>Customer Intelligence Platform</span></div>
-        <div class="nav-item"><span class="nav-icon">■</span> Pipeline</div>
-        <div class="nav-item"><span class="nav-icon">●</span> Accounts</div>
-        <div class="nav-item"><span class="nav-icon">▲</span> Product Intel</div>
-        <div class="nav-item active"><span class="nav-icon">▬</span> Usage Matrix</div>
+        <div class="nav-item"><span class="nav-icon">&#9632;</span> Pipeline</div>
+        <div class="nav-item"><span class="nav-icon">&#9679;</span> Accounts</div>
+        <div class="nav-item"><span class="nav-icon">&#9650;</span> Product Intel</div>
+        <div class="nav-item active"><span class="nav-icon">&#9644;</span> Usage Matrix</div>
       </div>
       <div class="main-content">
         <div class="page-header">
@@ -761,53 +798,215 @@
             </thead>
             <tbody>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Vanguard Group</a></td>
+                <td><a class="account-link" href="#">Vanguard Group</a></td>
                 <td><span class="badge badge-amber">Trial</span></td>
                 <td style="font-weight:600">2,340/day</td>
-                <td style="color:var(--green);font-weight:600">↑ +34%</td>
+                <td style="color:var(--green);font-weight:600">&#8593; +34%</td>
                 <td>$680K</td>
-                <td><span class="signal signal-strong">● Strong Convert</span></td>
+                <td><span class="signal signal-strong">&#9679; Strong Convert</span></td>
                 <td style="font-size:12px">Exceeding trial criteria. Push for close.</td>
               </tr>
               <tr style="background:#FFF8F0">
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">Goldman Sachs</a></td>
+                <td><a class="account-link" href="#">Goldman Sachs</a></td>
                 <td><span class="badge badge-amber">Trial</span></td>
                 <td style="font-weight:600">120/day</td>
-                <td style="color:var(--red);font-weight:600">↓ -60%</td>
+                <td style="color:var(--red);font-weight:600">&#8595; -60%</td>
                 <td>$520K</td>
-                <td><span class="signal signal-risk">● At-Risk Trial</span></td>
+                <td><span class="signal signal-risk">&#9679; At-Risk Trial</span></td>
                 <td style="font-size:12px">Usage declining, 8 days left. Urgent outreach needed.</td>
               </tr>
               <tr style="background:#FFF8F0">
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">State Street</a></td>
+                <td><a class="account-link" href="#">State Street</a></td>
                 <td><span class="badge badge-green">Retained</span></td>
                 <td style="font-weight:600">210/day</td>
-                <td style="color:var(--red);font-weight:600">↓ -45%</td>
+                <td style="color:var(--red);font-weight:600">&#8595; -45%</td>
                 <td>$560K</td>
-                <td><span class="signal signal-risk">● Churn Risk</span></td>
+                <td><span class="signal signal-risk">&#9679; Churn Risk</span></td>
                 <td style="font-size:12px">Usage dropping. Engage before renewal (Apr).</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">JPMorgan Chase</a></td>
+                <td><a class="account-link" href="#">JPMorgan Chase</a></td>
                 <td><span class="badge badge-green">Customer</span></td>
                 <td style="font-weight:600">8,920/day</td>
-                <td style="color:var(--green);font-weight:600">↑ +22%</td>
+                <td style="color:var(--green);font-weight:600">&#8593; +22%</td>
                 <td>$1.2M</td>
-                <td><span class="signal signal-strong">● Expansion</span></td>
+                <td><span class="signal signal-strong">&#9679; Expansion</span></td>
                 <td style="font-size:12px">Highest usage. Explore additional teams/products.</td>
               </tr>
               <tr>
-                <td><a class="account-link" href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#">BNY Mellon</a></td>
+                <td><a class="account-link" href="#">BNY Mellon</a></td>
                 <td><span class="badge badge-amber">Trial</span></td>
                 <td style="font-weight:600">1,800/day</td>
-                <td style="color:var(--green);font-weight:600">↑ +18%</td>
+                <td style="color:var(--green);font-weight:600">&#8593; +18%</td>
                 <td>$290K</td>
-                <td><span class="signal signal-opportunity">● Upsell</span></td>
+                <td><span class="signal signal-opportunity">&#9679; Upsell</span></td>
                 <td style="font-size:12px">High usage relative to deal size. Explore larger commitment.</td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- VIEW 5: SPREADSHEET SYNC -->
+<!-- ═══════════════════════════════════════ -->
+<div class="section-header">
+  <h2>View 5: Spreadsheet Sync — Centralized Google Sheet</h2>
+  <p>A shared Google Sheet that serves as both a data entry point and a live mirror of the CIP Pipeline Dashboard. Bidirectional sync every 15 minutes.</p>
+</div>
+<div class="mockup-frame">
+  <div class="browser-chrome">
+    <div class="browser-dot r"></div><div class="browser-dot y"></div><div class="browser-dot g"></div>
+    <div class="browser-url">docs.google.com/spreadsheets/d/kensho-cip-tracker</div>
+  </div>
+  <div class="sheets-container">
+    <!-- Sheets Header -->
+    <div class="sheets-header">
+      <div class="sheets-title-area">
+        <div class="sheets-title">Kensho CIP — Account Tracker</div>
+      </div>
+      <div class="sheets-toolbar">
+        <span class="sheets-badge sheets-badge-green">⚫ Last Synced: 2 min ago</span>
+        <button class="sheets-btn sheets-btn-primary">Sync Now</button>
+      </div>
+      <!-- Sync Status Panel -->
+      <div class="sheets-status-panel">
+        <div class="sheets-status-item"><span class="sheets-status-label">Next sync:</span> <span class="sheets-status-value">13 min</span></div>
+        <div class="sheets-status-item"><span class="sheets-status-label">Last sync:</span> <span class="sheets-status-value">2 min ago</span></div>
+        <div class="sheets-status-item"><span class="sheets-status-label">Pending:</span> <span class="sheets-status-value">3 changes</span></div>
+        <div class="sheets-status-item"><span class="sheets-status-label">Errors:</span> <span class="sheets-status-value">0</span></div>
+      </div>
+    </div>
+
+    <!-- Sheet Tabs -->
+    <div class="sheets-tabs">
+      <div class="sheets-tab active">Pipeline Tracker</div>
+      <div class="sheets-tab">Sync Log</div>
+      <div class="sheets-tab">Sync Errors</div>
+    </div>
+
+    <!-- Spreadsheet Grid -->
+    <div class="sheets-grid">
+      <table class="sheets-table">
+        <thead>
+          <tr>
+            <th>Account Name</th>
+            <th>Status</th>
+            <th>Deal Stage</th>
+            <th>Total Value</th>
+            <th>Trial Status</th>
+            <th>Trial Days Left</th>
+            <th>Usage (7d avg)</th>
+            <th>Last Meeting</th>
+            <th>Kensho Owner</th>
+            <th>Product Interest</th>
+            <th>Latest Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Vanguard Group -->
+          <tr class="sheets-synced">
+            <td>Vanguard Group</td>
+            <td><span class="badge badge-amber">Trial</span></td>
+            <td>Negotiation</td>
+            <td>$680K</td>
+            <td><span class="badge badge-blue">Active</span></td>
+            <td>47</td>
+            <td style="font-weight:600;color:var(--green)">2,340/day ↑</td>
+            <td>Feb 21</td>
+            <td>Sarah M.</td>
+            <td><span class="tag tag-blue">MCP Connector</span> <span class="tag tag-purple">Claude</span></td>
+            <td style="font-size:11px">Exceeding criteria. Schedule Grounding demo.</td>
+          </tr>
+          <!-- JPMorgan Chase -->
+          <tr class="sheets-synced">
+            <td>JPMorgan Chase</td>
+            <td><span class="badge badge-green">Customer</span></td>
+            <td>Closed Won</td>
+            <td>$1.2M</td>
+            <td>—</td>
+            <td>—</td>
+            <td style="font-weight:600;color:var(--green)">8,920/day ↑</td>
+            <td>Feb 19</td>
+            <td>Mike T.</td>
+            <td><span class="tag tag-blue">LRA API</span></td>
+            <td style="font-size:11px">Highest usage. Explore expansion.</td>
+          </tr>
+          <!-- Goldman Sachs -->
+          <tr class="sheets-pending">
+            <td>Goldman Sachs</td>
+            <td><span class="badge badge-amber">Trial</span></td>
+            <td>Evaluation</td>
+            <td>$520K</td>
+            <td><span class="badge badge-red">At Risk</span></td>
+            <td>8</td>
+            <td style="font-weight:600;color:var(--red)">120/day ↓</td>
+            <td>Feb 10</td>
+            <td>Sarah M.</td>
+            <td><span class="tag tag-blue">Product Eval</span></td>
+            <td style="font-size:11px">Usage declining. Urgent outreach.</td>
+          </tr>
+          <!-- BlackRock -->
+          <tr class="sheets-synced">
+            <td>BlackRock</td>
+            <td><span class="badge badge-blue">Prospect</span></td>
+            <td>Discovery</td>
+            <td>$340K</td>
+            <td>—</td>
+            <td>—</td>
+            <td style="color:var(--gray-400)">—</td>
+            <td>Feb 18</td>
+            <td>Alex K.</td>
+            <td><span class="tag tag-blue">Grounding</span></td>
+            <td style="font-size:11px">Initial demo scheduled for Mar 5.</td>
+          </tr>
+          <!-- Citadel -->
+          <tr class="sheets-synced">
+            <td>Citadel</td>
+            <td><span class="badge badge-green">Customer</span></td>
+            <td>Closed Won</td>
+            <td>$890K</td>
+            <td>—</td>
+            <td>—</td>
+            <td style="font-weight:600;color:var(--amber)">1,050/day →</td>
+            <td>Jan 28</td>
+            <td>Mike T.</td>
+            <td><span class="tag tag-purple">MCP Claude</span></td>
+            <td style="font-size:11px">Stable usage. Renewal in 6 months.</td>
+          </tr>
+          <!-- Fidelity -->
+          <tr class="sheets-pending">
+            <td>Fidelity</td>
+            <td><span class="badge badge-blue">Prospect</span></td>
+            <td>Qualification</td>
+            <td>$450K</td>
+            <td>—</td>
+            <td>—</td>
+            <td style="color:var(--gray-400)">—</td>
+            <td>Feb 20</td>
+            <td>Sarah M.</td>
+            <td><span class="tag tag-blue">LRA API</span> <span class="tag tag-blue">Grounding</span></td>
+            <td style="font-size:11px">Prospect. Awaiting budget approval.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Legend -->
+    <div class="sheets-legend">
+      <div class="sheets-legend-item">
+        <div class="sheets-legend-dot" style="background:#2B7AB8;border-left:3px solid #2B7AB8"></div>
+        <span style="color:var(--gray-700)"><strong>Blue left border</strong> = synced from CIP (read-only)</span>
+      </div>
+      <div class="sheets-legend-item">
+        <div class="sheets-legend-dot" style="background:#D4870E"></div>
+        <span style="color:var(--gray-700)"><strong>Yellow background</strong> = pending upload to CIP</span>
+      </div>
+      <div class="sheets-legend-item">
+        <span style="color:var(--gray-500);font-size:10px">Bidirectional sync every 15 minutes</span>
       </div>
     </div>
   </div>
@@ -849,13 +1048,13 @@
           <div class="slack-field"><div class="slack-field-label">Next Steps</div><div class="slack-field-value">Schedule Grounding demo for risk team by Mar 1</div></div>
           <div class="slack-field"><div class="slack-field-label">Expansion Signal</div><div class="slack-field-value">London office scaling discussion initiated</div></div>
           <div class="slack-buttons">
-            <button class="slack-btn confirm">✓ Confirm &amp; Save</button>
+            <button class="slack-btn confirm">✓ Confirm & Save</button>
             <button class="slack-btn">✎ Edit</button>
             <button class="slack-btn">✕ Discard</button>
           </div>
         </div>
         <div style="font-size:11px;color:#616061;margin-top:6px">
-          <a href="file:///Users/jjatherton/Library/Application%20Support/Claude/local-agent-mode-sessions/3fc1062e-91b6-49e6-b882-cfbed22aa449/6fc35bf4-855f-4d07-b907-40ab5df7a4bf/local_614484e6-3526-4106-a83e-3607bf6eab44/outputs/CIP_UI_Mockups.html#" style="color:#4A9CC9;text-decoration:none">View Vanguard Group in CIP →</a>
+          <a href="#" style="color:#4A9CC9;text-decoration:none">View Vanguard Group in CIP →</a>
         </div>
       </div>
     </div>
@@ -864,9 +1063,8 @@
 
 <div style="text-align:center; padding:60px 20px; color:var(--gray-400); font-size:14px;">
   <p>Kensho Customer Intelligence Platform — UI Mockups</p>
-  <p style="margin-top:4px">Built by GTM Engineering | Kensho Technologies | An S&amp;P Global Company</p>
+  <p style="margin-top:4px">Built by GTM Engineering | Kensho Technologies | An S&P Global Company</p>
 </div>
 
-
-
-</body></html>
+</body>
+</html>
